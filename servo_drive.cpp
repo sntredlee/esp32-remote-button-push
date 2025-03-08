@@ -22,8 +22,8 @@ cmd_err_t push_button_cmd(int argc, char *argv[]){
   delay(500);
   vTaskDelay(1);
   Serial.printf("Move servo position to: %d degrees\n\r", deg_up);
-  myServo.write(deg_up);
-  delay(500);
+  myServo.write(0);
+  delay(1000);
   vTaskDelay(1);
   myServo.detach();
 
